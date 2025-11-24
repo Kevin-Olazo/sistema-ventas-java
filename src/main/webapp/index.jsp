@@ -3,11 +3,30 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <h1><%= "Hello World!" %>
-    </h1>
-    <br/>
-    <a href="hello-servlet">Hello Servlet</a>
+
+<div class="container">
+    <h2>Registrar Usuario</h2>
+
+    <form>
+        <div>
+            <label for="txtNombre">Nombre: </label>
+            <input type="text" name="txtNombre" id="txtNombre">
+        </div>
+        <div>
+            <label for="txtEdad">Edad: </label>
+            <input type="text" name="txtEdad" id="txtEdad">
+        </div>
+        <div>
+            <label for="txtCorreo">Correo: </label>
+            <input type="text" name="txtCorreo" id="txtCorreo">
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar usuario</button>
+
+    </form>
+</div>
 </body>
 </html>
