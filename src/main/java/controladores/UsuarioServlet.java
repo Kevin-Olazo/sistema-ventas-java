@@ -9,12 +9,21 @@ import modelos.Usuario;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 @WebServlet("/RegistrarUsuario")
 public class UsuarioServlet extends HttpServlet {
 
+    ArrayList<Usuario> usuarios = new ArrayList<>();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Enviamos la lista
+        req.setAttribute("usuarios", usuarios);
+        // Enviamos el tamaño actual de la lista (opcional)
+        req.setAttribute("cantidad", usuarios.size());
+
+        req.getRequestDispatcher("listaUsuarios.jsp").forward(req,resp);
 
     }
 
@@ -37,9 +46,11 @@ public class UsuarioServlet extends HttpServlet {
         usuario.setFechaNacimiento(fechaNacimiento);
         usuario.setFechaRegistro(fechaRegistro);
 
+        usuarios.add(usuario);
+
         req.setAttribute("usuario", usuario);
 
-        req.getRequestDispatcher("salidaUsuario.jsp").forward(req,resp);
+        req.getRequestDispatcher("index.jsp").forward(req,resp);
 
     }
 }

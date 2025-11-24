@@ -19,22 +19,37 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input class="form-control" type="date" name="txtFechaNacimiento" id="txtFechaNacimiento" placeholder="Fecha" required>
+                <input class="form-control" type="date" name="txtFechaNacimiento" id="txtFechaNacimiento"
+                       placeholder="Fecha" required>
                 <label for="txtFechaNacimiento">Fecha de Nacimiento: </label>
             </div>
 
             <div class="form-floating mb-3">
-                <input class="form-control" type="text" name="txtCorreo" id="txtCorreo" placeholder="nombre@ejemplo.com" required>
+                <input class="form-control" type="text" name="txtCorreo" id="txtCorreo" placeholder="nombre@ejemplo.com"
+                       required>
                 <label class="form-label" for="txtCorreo">Correo: </label>
             </div>
 
-            <div class="d-grid gap-4">
-                <button type="submit" class="btn btn-primary btn-lg">Registrar usuario</button>
+            <div class="d-grid gap-4 mb-3">
+                <button class="btn btn-primary btn-lg" type="submit" >Registrar usuario</button>
             </div>
 
         </form>
+
+        <div>
+            <form action="RegistrarUsuario" method="GET">
+                <div class="d-grid">
+                <button class="btn btn-secondary btn-lg" type="submit">Ver lista de usuarios</button>
+                </div>
+            </form>
+        </div>
+
+
     </div>
+
+
 </div>
+
 
 </body>
 </html>
