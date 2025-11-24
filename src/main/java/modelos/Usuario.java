@@ -6,14 +6,16 @@ public class Usuario {
     private String nombre;
     private String correo;
     private LocalDate fechaNacimiento;
+    private LocalDate fechaRegistro;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String correo, LocalDate fechaNacimiento) {
+    public Usuario(String nombre, String correo, LocalDate fechaNacimiento, LocalDate fechaRegistro) {
         this.nombre = nombre;
         this.correo = correo;
         this.fechaNacimiento = fechaNacimiento;
+        this.fechaRegistro = fechaRegistro;
     }
 
     public String getNombre() {
@@ -38,6 +40,14 @@ public class Usuario {
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public LocalDate getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(LocalDate fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
 
     public int getEdad() {

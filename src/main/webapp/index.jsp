@@ -17,7 +17,7 @@
             <input type="text" name="txtNombre" id="txtNombre">
         </div>
         <div>
-            <label for="txtEdad">Edad: </label>
+            <label for="txtEdad">Fecha de Nacimiento: </label>
             <input type="text" name="txtEdad" id="txtEdad">
         </div>
         <div>
