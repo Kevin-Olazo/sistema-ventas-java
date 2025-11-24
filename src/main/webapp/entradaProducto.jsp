@@ -19,7 +19,7 @@
 
     <div class="col-12 col-md-5 col-lg-4 border shadow p-4">
         <h2 class="text-center text-primary">Registrar Producto</h2>
-        <form action="" method="POST">
+        <form action="RegistrarProducto" method="POST">
 
             <div class="form-floating mb-3">
                 <input class="form-control" type="text" name="txtNombreProducto" id="txtNombreProducto"

@@ -1,7 +1,7 @@
 package modelos;
 
 public class Producto {
-    double IGV = 0.18;
+    private final double IGV = 0.18;
 
     private String nombre;
     private double precio;
@@ -10,8 +10,10 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(double IGV, String nombre, double precio, int cantidad) {
-        this.IGV = IGV;
+    public Producto(String nombre, double precio, int cantidad) {
+        if (precio < 0 || cantidad < 0) {
+            throw new IllegalArgumentException("Precio y cantidad deben ser positivos");
+        }
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
@@ -19,17 +21,16 @@ public class Producto {
 
     // METODOS PERSONALIZADOS
 
-    public double precioConIGV() {
-        return this.precio + this.precio * IGV;
+    public double getMontoIGV(){
+        return precio * IGV;
     }
 
-    public double getIGV() {
-        return IGV;
+    public double getPrecioConIGV() {
+        double calculo = this.precio * (1 + IGV);
+        return Math.round(calculo * 100.0) / 100.0;
     }
 
-    public void setIGV(double IGV) {
-        this.IGV = IGV;
-    }
+    // GETTERS AND SETTERS
 
     public String getNombre() {
         return nombre;
@@ -44,6 +45,9 @@ public class Producto {
     }
 
     public void setPrecio(double precio) {
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo");
+        }
         this.precio = precio;
     }
 
@@ -52,6 +56,9 @@ public class Producto {
     }
 
     public void setCantidad(int cantidad) {
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad no puede ser negativa");
+        }
         this.cantidad = cantidad;
     }
 }
