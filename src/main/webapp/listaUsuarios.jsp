@@ -18,54 +18,72 @@
 </head>
 <body class="bg-light">
 
-<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 py-5" >
-    <h1 class="text-center text-uppercase text-primary-emphasis mb-4">Lista de usuarios registrados</h1>
+<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 py-5">
 
-    <table class="table table-striped table-bordered">
+    <%--Creamos un Card con Bootstrap--%>
+    <div class="card shadow border-0 rounded-4">
 
-        <thead class="table-header">
-        <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Fecha de Nacimiento</th>
-            <th>Fecha de Registro</th>
-        </tr>
-        </thead>
+        <%--Creamos el Header del Card--%>
+        <div class="card-header bg-primary text-white p-4 d-flex justify-content-between align-items-center rounded-top-4">
+            <h3 class="m-0"><i class="bi bi-people-fill me-2"></i>Usuarios Registrados</h3>
+            <a href="index.jsp" class="btn btn-light text-primary fw-bold">
+                <i class="bi bi-plus-circle me-1"></i> Nuevo Usuario
+            </a>
+        </div>
 
-        <tbody>
+        <%--Creamos el Body del Card--%>
+        <div class="card-body p-4">
 
-        <%
+            <%--Creamos la tabla dentro del body --%>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle">
 
-            List<Usuario> usuarios = (List<Usuario>) request.getAttribute("usuarios");
+                    <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Fecha de Registro</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tbody>
 
-            if (usuarios != null) {
-                for (int i = 0; i < usuarios.size(); i++) {
-                    Usuario u = usuarios.get(i);
+                    <%
 
+                        List<Usuario> usuarios = (List<Usuario>) request.getAttribute("usuarios");
 
-        %>
-        <tr>
-            <td ><%=(i + 1)%>
-            </td>
-            <td><%=u.getNombre()%>
-            </td>
-            <td><%=u.getCorreo()%>
-            </td>
-            <td><%=u.getFechaNacimientoFormateada()%>
-            </td>
-            <td><%=u.getFechaRegistroFormateada()%>
-            </td>
-        </tr>
-        <% }
-
-        }
-        %>
-
-        </tbody>
+                        if (usuarios != null) {
+                            for (int i = 0; i < usuarios.size(); i++) {
+                                Usuario u = usuarios.get(i);
 
 
-    </table>
+                    %>
+                    <tr>
+                        <td class="text-center fw-bold"><%=(i + 1)%>
+                        </td>
+                        <td class="fw-medium"><%=u.getNombre()%>
+                        </td>
+                        <td class="text-secondary"><%=u.getCorreo()%>
+                        </td>
+                        <td class="text-nowrap text-center"><%=u.getFechaNacimientoFormateada()%>
+                        </td>
+                        <td class="text-nowrap text-center"><%=u.getFechaRegistroFormateada()%>
+                        </td>
+                    </tr>
+                    <% }
+
+                    }
+                    %>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
