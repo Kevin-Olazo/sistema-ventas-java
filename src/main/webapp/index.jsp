@@ -11,7 +11,7 @@
 <div class="container">
     <h2>Registrar Usuario</h2>
 
-    <form>
+    <form action="RegistrarUsuario" method="POST">
         <div>
             <label for="txtNombre">Nombre: </label>
             <input type="text" name="txtNombre" id="txtNombre">
@@ -25,8 +25,8 @@
             <input type="text" name="txtCorreo" id="txtCorreo">
         </div>
         <button type="submit" class="btn btn-primary">Registrar usuario</button>
-
     </form>
 </div>
+
 </body>
 </html>
