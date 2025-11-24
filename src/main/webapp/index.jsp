@@ -12,15 +12,15 @@
     <h2>Registrar Usuario</h2>
 
     <form action="RegistrarUsuario" method="POST">
-        <div>
+        <div class="form-control">
             <label for="txtNombre">Nombre: </label>
             <input type="text" name="txtNombre" id="txtNombre">
         </div>
-        <div>
-            <label for="txtEdad">Fecha de Nacimiento: </label>
-            <input type="text" name="txtEdad" id="txtEdad">
+        <div class="form-control">
+            <label for="txtFechaNacimiento">Fecha de Nacimiento: </label>
+            <input type="date" name="txtFechaNacimiento" id="txtFechaNacimiento">
         </div>
-        <div>
+        <div class="form-control">
             <label for="txtCorreo">Correo: </label>
             <input type="text" name="txtCorreo" id="txtCorreo">
         </div>
