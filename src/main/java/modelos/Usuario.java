@@ -2,6 +2,7 @@ package modelos;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class Usuario {
     private String nombre;
@@ -18,6 +19,27 @@ public class Usuario {
         this.fechaNacimiento = fechaNacimiento;
         this.fechaRegistro = fechaRegistro;
     }
+
+    // METODOS PERSONALIZADOS
+
+    public int getEdad() {
+        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
+    }
+
+    public String getFechaNacimientoFormateada(){
+        if (fechaNacimiento == null) return "";
+
+        return fechaNacimiento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    public String getFechaRegistroFormateada(){
+        if (fechaRegistro == null) return "";
+
+        return fechaRegistro.format(DateTimeFormatter.ofPattern("dd/MM/yyyyy"));
+    }
+
+
+    // GETTERS AND SETTERS
 
     public String getNombre() {
         return nombre;
@@ -51,7 +73,5 @@ public class Usuario {
         this.fechaRegistro = fechaRegistro;
     }
 
-    public int getEdad() {
-        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
-    }
+
 }
