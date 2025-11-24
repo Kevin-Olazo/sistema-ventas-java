@@ -28,7 +28,7 @@
                 <label class="form-label" for="txtCorreo">Correo: </label>
             </div>
 
-            <div class="d-grid">
+            <div class="d-grid gap-4">
                 <button type="submit" class="btn btn-primary btn-lg">Registrar usuario</button>
             </div>
 

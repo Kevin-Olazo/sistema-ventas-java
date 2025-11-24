@@ -23,34 +23,39 @@
 %>
 
 <body class="bg-secondary">
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="col-12 col-md-5 col-lg-4 border shadow p-4 bg-white rounded">
-        <h2 class="text-center mb-4 text-primary">Usuario registrado</h2>
-        <p>Nombre: <%= usuario.getNombre() %>
-        </p>
-        <p>Correo: <%= usuario.getCorreo() %>
-        </p>
-        <p>Fecha de Nacimiento: <%= usuario.getFechaNacimiento()%>
-        </p>
-        <p>Edad: <%= usuario.getEdad() %>
-        </p>
-        <p>Fecha de Registro: <%= usuario.getFechaRegistro() %>
-        </p>
-    </div>
-</div>
 
-<div class="container">
-    <h2>Usuario Expression Language (Usando \${})</h2>
-    <p>Nombre: ${usuario.nombre}
-    </p>
-    <p>Correo: ${usuario.correo}
-    </p>
-    <p>Fecha de Nacimiento: ${usuario.fechaNacimientoFormateada}
-    </p>
-    <p>Edad: ${usuario.edad}
-    </p>
-    <p>Fecha de Registro: ${usuario.fechaRegistroFormateada}
-    </p>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-12 col-md-5 col-lg-4 d-flex flex-column gap-3">
+
+        <div class="border shadow p-4 bg-white rounded">
+            <h2 class="text-center mb-4 text-primary">Usuario registrado</h2>
+            <p><strong>Nombre:</strong> <%= usuario.getNombre() %>
+            </p>
+            <p><strong>Correo:</strong> <%= usuario.getCorreo() %>
+            </p>
+            <p><strong>Fecha de Nacimiento:</strong> <%= usuario.getFechaNacimiento()%>
+            </p>
+            <p><strong>Edad:</strong> <%= usuario.getEdad() %>
+            </p>
+            <p><strong>Fecha de Registro:</strong> <%= usuario.getFechaRegistro() %>
+            </p>
+        </div>
+
+        <div class="border shadow p-4 bg-white rounded">
+            <h2 class="text-center mb-4 text-primary">Usuario registrado</h2>
+            <h6 class="text-center text-black-50">Usando Expression Language \${}</h6>
+            <p>Nombre: ${usuario.nombre}
+            </p>
+            <p>Correo: ${usuario.correo}
+            </p>
+            <p>Fecha de Nacimiento: ${usuario.fechaNacimientoFormateada}
+            </p>
+            <p>Edad: ${usuario.edad}
+            </p>
+            <p>Fecha de Registro: ${usuario.fechaRegistroFormateada}
+            </p>
+        </div>
+    </div>
 </div>
 
 
