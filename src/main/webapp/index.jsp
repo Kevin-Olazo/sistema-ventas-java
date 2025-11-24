@@ -47,8 +47,10 @@
 
     </div>
 
-
 </div>
+<div><a class="btn btn-primary" href="entradaProducto.jsp">Registrar producto</a></div>
+
+
 
 
 </body>

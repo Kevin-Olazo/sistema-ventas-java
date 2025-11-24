@@ -18,8 +18,7 @@
 </head>
 <body class="bg-light">
 
-<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 py-5">
-
+<div class="container d-flex flex-column justify-content-center min-vh-100 py-5">
     <%--Creamos un Card con Bootstrap--%>
     <div class="card shadow border-0 rounded-4">
 
