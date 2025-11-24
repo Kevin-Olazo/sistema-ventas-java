@@ -30,7 +30,12 @@ public class UsuarioServlet extends HttpServlet {
 
         LocalDate fechaRegistro = LocalDate.now();
 
-        Usuario usuario = new Usuario(nombre, correo, fechaNacimiento, fechaRegistro);
+        Usuario usuario = new Usuario();
+
+        usuario.setNombre(nombre);
+        usuario.setCorreo(correo);
+        usuario.setFechaNacimiento(fechaNacimiento);
+        usuario.setFechaRegistro(fechaRegistro);
 
         req.setAttribute("usuario", usuario);
 

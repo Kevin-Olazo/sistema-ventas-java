@@ -1,6 +1,7 @@
 package modelos;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Usuario {
     private String nombre;
@@ -51,6 +52,6 @@ public class Usuario {
     }
 
     public int getEdad() {
-        return LocalDate.now().getYear() - fechaNacimiento.getYear();
+        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
     }
 }
