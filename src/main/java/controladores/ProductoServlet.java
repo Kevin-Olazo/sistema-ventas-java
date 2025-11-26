@@ -18,6 +18,10 @@ public class ProductoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setAttribute("listaProductos", listaProductos);
+        req.setAttribute("cantidad", listaProductos.size());
+
+        req.getRequestDispatcher("salidaProducto.jsp").forward(req,resp);
     }
 
     @Override
@@ -32,7 +36,7 @@ public class ProductoServlet extends HttpServlet {
 
         req.setAttribute("producto", p);
 
-        req.getRequestDispatcher("salidaProducto.jsp").forward(req,resp);
+        req.getRequestDispatcher("entradaProducto.jsp").forward(req,resp);
 
     }
 }

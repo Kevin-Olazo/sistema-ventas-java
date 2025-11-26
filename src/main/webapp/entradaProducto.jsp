@@ -46,6 +46,13 @@
         </form>
     </div>
 
+    <div>
+        <form action="RegistrarProducto" METHOD="GET">
+            <button type="submit">Ver Lista de Productos</button>
+        </form>
+
+    </div>
+
 </div>
 
 
